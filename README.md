@@ -3,13 +3,13 @@
 <p align="center"><b>The first front-end project I ever built: a tech store landing page with a video section, product gallery and testimonials.</b></p>
 
 <p align="center">
-[![Live Demo](https://img.shields.io/badge/Live_Demo-▶-2ea44f?style=for-the-badge&logo=vercel&logoColor=white)](https://mister2314.github.io/First-Project/)
-![HTML5](https://img.shields.io/badge/HTML5-e34f26?style=flat-square&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572b6?style=flat-square&logoColor=white)
-![Vanilla JS](https://img.shields.io/badge/Vanilla_JS-f7df1e?style=flat-square&logoColor=white)
+<a href="https://mister2314.github.io/First-Project/"><img src="https://img.shields.io/badge/Live_Demo-2ea44f?style=flat-square&logo=vercel&logoColor=white" alt="Live demo" height="28"></a>
+<img src="https://img.shields.io/badge/HTML5-e34f26?style=flat-square" alt="HTML5" height="20">
+<img src="https://img.shields.io/badge/CSS3-1572b6?style=flat-square" alt="CSS3" height="20">
+<img src="https://img.shields.io/badge/Vanilla_JS-f7df1e?style=flat-square" alt="Vanilla JS" height="20">
 </p>
 
-<p align="center">[**Live demo**](https://mister2314.github.io/First-Project/) · [Quick start](#quick-start) · [Features](#features) · [Architecture](#architecture) · [FAQ](#faq)</p>
+<p align="center"><a href="https://mister2314.github.io/First-Project/"><b>Live demo</b></a> &nbsp;·&nbsp; <a href="#quick-start">Quick start</a> &nbsp;·&nbsp; <a href="#features">Features</a> &nbsp;·&nbsp; <a href="#architecture">Architecture</a> &nbsp;·&nbsp; <a href="#faq">FAQ</a></p>
 
 <p align="center">
   <a href="https://mister2314.github.io/First-Project/">
@@ -89,6 +89,33 @@ assets/css/style.css — all layout and component styles
 assets/img/ — product, gallery and testimonial imagery
 assets/video/ — section video asset
 ```
+
+## FAQ
+
+<details>
+<summary><b>Why keep this public?</b></summary>
+
+It is the honest starting point. Comparing it with the newer repositories is a fair measure of how much changed — and it costs nothing to leave up.
+
+</details>
+
+<details>
+<summary><b>What would I do differently?</b></summary>
+
+Everything structural: the CSS is one 4 000-line file, the class names are inconsistent, and the sections repeat markup. The newer projects split styles per component.
+
+</details>
+
+<details>
+<summary><b>Does it still work?</b></summary>
+
+Yes — it is static HTML and CSS, so it runs in any browser. There is nothing to break.
+
+</details>
+
+## Roadmap
+
+- [ ] Add a note at the top explaining it is a 2023 learning build
 
 ## Notes
 
