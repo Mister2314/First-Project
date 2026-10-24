@@ -20,19 +20,21 @@ export default function App() {
   return (
     <>
       <Header />
-      <Hero />
-      <SecondSection />
-      <ThirdSection />
-      <FourthSection />
-      <VideoSection />
-      <FifthSection />
-      <SixthSection />
-      <SeventhSection />
-      <EighthSection />
-      <NinthSection />
-      <Tenth2 />
-      <Testimional />
-      <TenthSection />
+      <main id="main">
+        <Hero />
+        <SecondSection />
+        <ThirdSection />
+        <FourthSection />
+        <VideoSection />
+        <FifthSection />
+        <SixthSection />
+        <SeventhSection />
+        <EighthSection />
+        <NinthSection />
+        <Tenth2 />
+        <Testimional />
+        <TenthSection />
+      </main>
       <Footer />
     </>
   )

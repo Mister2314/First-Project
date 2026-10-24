@@ -1,7 +1,7 @@
 export default function VideoSection() {
   return (
     <section className="video-section">
-      <video data-aos="zoom-out" autoPlay loop muted playsInline>
+      <video data-aos="zoom-out" autoPlay loop muted playsInline preload="metadata">
         <source src="./assets/video/Home-3-Video.mp4" type="video/mp4" />
       </video>
       <img
