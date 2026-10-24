@@ -1,10 +1,16 @@
-# Wade — Tech Store Landing Page
+﻿# Wade — Tech Store Landing Page
 
 A landing page for a fictional tech store — the first front-end project I ever built, kept public as a baseline.
 
 **Live demo:** https://mister2314.github.io/First-Project/
 
-<img src="docs/preview.png" alt="Wade screenshot" width="380">
+<div align="center">
+
+| Desktop | Mobile |
+|---|---|
+| <img src="docs/shot-desktop.png" alt="Desktop view" width="700"> | <img src="docs/shot-mobile.png" alt="Mobile view" width="290"> |
+
+</div>
 
 ## What it does
 
