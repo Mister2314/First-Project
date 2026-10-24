@@ -1,6 +1,6 @@
 # Wade — Tech Store Landing Page
 
-A landing page for a fictional tech store — the first front-end project I ever built, kept public as a baseline.
+A landing page for a fictional tech store — the first front-end project I ever built, kept public as a baseline. In 2026 it went through a motion-and-accessibility revamp that kept the original identity: dark showroom chrome, Apple-blue accent, Poppins.
 
 **Live demo:** https://first-project-mister2314.vercel.app/
 
@@ -25,26 +25,35 @@ A landing page for a fictional tech store — the first front-end project I ever
 
 ## What it does
 
-A single static page covering the classic landing-page section set: hero with parallax-style background, embedded video block, product gallery, testimonials and footer, with Font Awesome 6 and Material Symbols for icons. It reflows to a single column on mobile. The CSS is one 1,100-line file with inconsistent class naming — newer repos in this profile split styles per component.
+A single static page with the full landing-page section set: product hero, subscribe blocks, product grid, embedded video, stats, gallery, features, testimonials and footer. All 14 sections are kept; the 2026 revamp re-choreographed how they arrive.
 
 ## Tech stack
 
-React 19 · TypeScript · Vite
+React 19 · TypeScript 5.8 · Vite 6 · GSAP 3 (ScrollTrigger) · Lenis
 
 ## Features
 
-- Parallax-style hero background
-- Embedded video section
-- Product gallery grid and testimonial cards
-- Font Awesome 6 and Material Symbols icon sets
-- Multi-resolution favicon assets
-- Responsive single-column reflow on mobile
+- Scroll choreography — staggered section reveals driven by GSAP ScrollTrigger over the original `data-aos` hooks, one parallax accent, no pinned sections
+- Smooth scrolling via Lenis with native momentum on touch devices
+- Sticky compact nav — the header shrinks with a backdrop blur after 40px of scroll
+- Product-card micro-interactions — hover image scale, focus states, add-to-cart with an animated cart-count badge
+- Editorial index treatment — hairline rules, oversized price numerals
+- Accessibility — real nav anchors, labeled inputs, skip link, `:focus-visible` rings, alt text
+- `prefers-reduced-motion` — every animated element has a static equivalent; nothing depends on motion to be readable
+- Mobile is its own composition (single-column products, restacked hero), not a squeezed desktop
+- Font Awesome 6 and Material Symbols icon sets, multi-resolution favicons
 
 ## Run locally
 
 ```bash
 git clone https://github.com/Mister2314/First-Project.git
 cd First-Project
-npx serve .
-# or just open index.html
+npm install
+npm run dev      # dev server
+npm run build    # type-check + production build
+npm run preview  # serve the production build
 ```
+
+## Project notes
+
+The revamp lives on the `revamp/firstproject` branch history; the pre-revamp state is tagged `pre-revamp-firstproject`. The motion system is one hook (`src/useAos.ts`) that maps the old AOS attributes onto GSAP timelines, so the section markup stayed untouched.
