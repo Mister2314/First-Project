@@ -1,8 +1,8 @@
-﻿# Wade — Tech Store Landing Page
+# Wade — Tech Store Landing Page
 
 A landing page for a fictional tech store — the first front-end project I ever built, kept public as a baseline.
 
-**Live demo:** https://mister2314.github.io/First-Project/
+**Live demo:** https://first-project-mister2314.vercel.app/
 
 <div align="center">
 
@@ -18,7 +18,7 @@ A single static page covering the classic landing-page section set: hero with pa
 
 ## Tech stack
 
-HTML · CSS · Vanilla JS
+React 19 · TypeScript · Vite
 
 ## Features
 
