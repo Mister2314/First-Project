@@ -30,7 +30,7 @@ export default function Testimional() {
         Demo content — fictional reviews
       </p>
       {testimonials.map((t, i) => (
-        <div data-aos="zoom-out" className="testimional-box" key={i}>
+        <div className="testimional-box" key={i}>
           <div className="stars">
             <i className="fa-solid fa-star" />
             <i className="fa-solid fa-star" />
