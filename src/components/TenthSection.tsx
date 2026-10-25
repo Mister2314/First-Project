@@ -14,7 +14,7 @@ export default function TenthSection() {
               worth knowing happens.
             </p>
             <div className="input-container2">
-              <input data-aos="fade-up" type="email" placeholder="Your email" />
+              <input type="email" placeholder="Your email" />
               <button data-aos="fade-up">Subscribe</button>
             </div>
           </div>

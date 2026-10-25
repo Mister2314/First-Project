@@ -26,6 +26,9 @@ const testimonials = [
 export default function Testimional() {
   return (
     <section className="testimional">
+      <p className="testimional-demo-note" style={{ textAlign: 'center', opacity: 0.65, fontSize: '0.85rem' }}>
+        Demo content — fictional reviews
+      </p>
       {testimonials.map((t, i) => (
         <div data-aos="zoom-out" className="testimional-box" key={i}>
           <div className="stars">
