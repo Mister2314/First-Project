@@ -29,10 +29,11 @@ A single static page with the full landing-page section set: product hero, subsc
 
 ## Tech stack
 
-React 19 · TypeScript 5.8 · Vite 6 · GSAP 3 (ScrollTrigger) · Lenis
+React 19 · TypeScript 5.8 · Vite 6 · GSAP 3 (ScrollTrigger) · Lenis · ESLint 9
 
 ## Features
 
+- Dark/light theme — system preference by default, persisted manual toggle, set before first paint (no flash); the light palette is designed, not inverted
 - Scroll choreography — staggered section reveals driven by GSAP ScrollTrigger over the original `data-aos` hooks, one parallax accent, no pinned sections
 - Smooth scrolling via Lenis with native momentum on touch devices
 - Sticky compact nav — the header shrinks with a backdrop blur after 40px of scroll
@@ -51,6 +52,7 @@ cd First-Project
 npm install
 npm run dev      # dev server
 npm run build    # type-check + production build
+npm run lint     # eslint over src/
 npm run preview  # serve the production build
 ```
 

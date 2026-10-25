@@ -4,11 +4,16 @@ import gsap from 'gsap'
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [count, setCount] = useState(0)
+  const [theme, setTheme] = useState<'light' | 'dark'>(() =>
+    document.documentElement.dataset.theme === 'light' ? 'light' : 'dark',
+  )
   const badgeRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', onScroll, { passive: true })
+    const onTheme = () => setTheme(document.documentElement.dataset.theme === 'light' ? 'light' : 'dark')
+    window.addEventListener('wade:theme-change', onTheme)
     const onAdd = () => {
       setCount((c) => c + 1)
       if (badgeRef.current) {
@@ -18,9 +23,21 @@ export default function Header() {
     window.addEventListener('wade:add-to-cart', onAdd)
     return () => {
       window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('wade:theme-change', onTheme)
       window.removeEventListener('wade:add-to-cart', onAdd)
     }
   }, [])
+
+  const toggleTheme = () => {
+    const next = theme === 'dark' ? 'light' : 'dark'
+    document.documentElement.dataset.theme = next
+    try {
+      localStorage.setItem('wade-theme', next)
+    } catch {
+      /* private mode: theme just won't persist */
+    }
+    window.dispatchEvent(new Event('wade:theme-change'))
+  }
 
   return (
     <header className={`header${scrolled ? ' is-scrolled' : ''}`}>
@@ -67,12 +84,20 @@ export default function Header() {
             <a href="tel:+3225120815">(322) 512 08 15</a>
           </p>
           <button className="cart-button" aria-label={`Cart, ${count} items`}>
-            <i className="fa-solid fa-bag-shopping" style={{ color: 'white', fontSize: 28 }} aria-hidden="true" />
+            <i className="fa-solid fa-bag-shopping" aria-hidden="true" />
             <span ref={badgeRef} className="shop-items" aria-hidden="true">
               {count}
             </span>
           </button>
           <button className="quote-button">Get a Quote</button>
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+            aria-pressed={theme === 'light'}
+          >
+            <i className={theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon'} aria-hidden="true" />
+          </button>
         </div>
       </div>
     </header>

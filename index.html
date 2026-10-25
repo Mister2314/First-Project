@@ -3,7 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <title>Tech Store – Wade</title>
+    <script>
+      // Set theme before first paint: stored choice wins, otherwise system.
+      (function () {
+        var t = null
+        try { t = localStorage.getItem('wade-theme') } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+        }
+        document.documentElement.dataset.theme = t
+      })()
+    </script>
     <link rel="icon" href="./assets/img/cropped-Wade-Favicon-32x32.png" />
     <link rel="icon" href="./assets/img/cropped-Wade-Favicon-180x180.png" />
     <link rel="apple-touch-icon" href="./assets/img/cropped-Wade-Favicon-180x180.png" />

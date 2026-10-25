@@ -80,9 +80,9 @@ export default function Footer() {
             <h1>© 2022 Qode Interactive, All Rights Reserved</h1>
           </div>
           <div className="right">
-            <i className="fa-brands fa-twitter" style={{ color: '#ffffff' }} />
-            <i className="fa-brands fa-pinterest-p" style={{ color: '#ffffff' }} />
-            <i className="fa-brands fa-facebook-f" style={{ color: '#ffffff' }} />
+            <i className="fa-brands fa-twitter" />
+            <i className="fa-brands fa-pinterest-p" />
+            <i className="fa-brands fa-facebook-f" />
           </div>
         </section>
       </div>
