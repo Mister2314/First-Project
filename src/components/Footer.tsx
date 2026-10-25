@@ -74,7 +74,7 @@ export default function Footer() {
       <div className="line">
         <section className="footer-bottom">
           <div className="left">
-            <img src="./assets/img/wade-footer-logo-light.png" alt="" />
+            <img src="./assets/img/wade-footer-logo-light.png" alt="Wade" />
           </div>
           <div className="text">
             <h1>© 2022 Qode Interactive, All Rights Reserved</h1>

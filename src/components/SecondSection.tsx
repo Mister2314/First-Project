@@ -14,11 +14,10 @@ export default function SecondSection() {
 
       <div className="right-box1">
         <p data-aos="fade-right" className="paragraph3">
-          Occaecati doloribus et laborum magnam. Aut eaque enim quia vel. Soluta consequatur enim utemporibus cumque
-          commodi tempora est tempora odio.
+          One email a week — new arrivals, restocks and subscriber-only deals. No spam, unsubscribe any time.
         </p>
         <p data-aos="fade-right" className="paragraph4">
-          Quos officia est aspernatur molestias debitis in nos culpa omnis sint corrupti.
+          Your discount code lands in your inbox the moment you confirm the subscription.
         </p>
       </div>
     </section>
